@@ -1,0 +1,110 @@
+[
+  {
+    "name": "Refrigerador Expositor Porta Dupla 1257L (All Black)",
+    "brand": "Metalfrio",
+    "desc": "Expositor de alta capacidade com porta dupla. Ideal para bebidas e refrigerados em área de venda.",
+    "image": "expositor-all-black-1257l.jpg"
+  },
+  {
+    "name": "Refrigerador Expositor Full Black 810L (2 Portas)",
+    "brand": "Imbera",
+    "desc": "Expositor grande para alto giro. Excelente visibilidade e capacidade para operação comercial.",
+    "image": "expositor-full-black-810l.jpg"
+  },
+  {
+    "name": "Cervejeira Imbera 522L (Porta de Vidro Preta)",
+    "brand": "Imbera",
+    "desc": "Cervejeira de alta capacidade com porta de vidro. Ideal para exposição de bebidas no ponto de venda.",
+    "image": "cervejeira-imbera-522l.jpg"
+  },
+  {
+    "name": "Cervejeira Beer Maxx 250 (Ônix) 264L",
+    "brand": "Metalfrio",
+    "desc": "Cervejeira com visual premium e performance para manter bebidas na temperatura ideal.",
+    "image": "beer-maxx-250-264l.jpg"
+  },
+  {
+    "name": "Freezer Vertical 531L",
+    "brand": "Metalfrio",
+    "desc": "Freezer vertical para conservação e armazenamento. Indicado para cozinhas e operações com estoque.",
+    "image": "freezer-vertical-531l.jpg"
+  },
+  {
+    "name": "Freezer Horizontal Tampa de Vidro 503L",
+    "brand": "Dipratos",
+    "desc": "Freezer horizontal com tampa de vidro para congelados e bebidas com visualização direta dos produtos.",
+    "image": "freezer-horizontal-503l.jpg"
+  },
+  {
+    "name": "Estufa VRD Dupla 12 Bandejas (com LED) 220V",
+    "brand": "Titã",
+    "desc": "Estufa dupla com 12 bandejas e iluminação LED para exposição aquecida e melhor apresentação no balcão.",
+    "image": "estufa-vrd-12b-led.jpg"
+  },
+  {
+    "name": "Estufa Vidro Reto Dupla 6 Bandejas 220V",
+    "brand": "Titã",
+    "desc": "Estufa dupla com vidro reto e 6 bandejas. Mantém alimentos aquecidos com ótima visibilidade para venda.",
+    "image": "estufa-vidro-reto-6b.jpg"
+  },
+  {
+    "name": "Fogão Comercial 4 Bocas 30x30 Inox 430",
+    "brand": "Venâncio",
+    "desc": "Fogão robusto para cozinhas profissionais. Indicado para alta demanda e uso contínuo.",
+    "image": "fogao-4-bocas-30x30.jpg"
+  },
+  {
+    "name": "Forno Convector para 4 Assadeiras",
+    "brand": "Venâncio",
+    "desc": "Assa com convecção para uniformidade e produtividade. Ideal para padarias e cozinhas comerciais.",
+    "image": "forno-convector-4-assadeiras.jpg"
+  },
+  {
+    "name": "Masseira Basculante 5kg (1/2 HP) Monofásica",
+    "brand": "Maná",
+    "desc": "Masseira basculante para padronização e produtividade na preparação de massas para panificação e confeitaria.",
+    "image": "masseira-basculante-5kg.jpg"
+  },
+  {
+    "name": "Cortador de Frios Semi-Automático 300mm",
+    "brand": "Gural",
+    "desc": "Fatiamento uniforme com ajuste de espessura. Ideal para frios, queijos e padarias.",
+    "image": "cortador-frios-300mm.jpg"
+  },
+  {
+    "name": "Balança Prix Agile 300S",
+    "brand": "Toledo",
+    "desc": "Balança para balcão e operação em PDV, com pesagem rápida e prática.",
+    "image": "balanca-prix-agile-300s.jpg"
+  },
+  {
+    "name": "Liquidificador Industrial Inox 2L Alta Rotação",
+    "brand": "Skymsen",
+    "desc": "Alta rotação para sucos, vitaminas e misturas. Indicado para uso comercial.",
+    "image": "liquidificador-inox-2l.jpg"
+  },
+  {
+    "name": "Chapa Bifeteira Comercial",
+    "brand": "PCM Máquinas",
+    "desc": "Ideal para grelhados, hambúrgueres e lanches. Alta produtividade em operação.",
+    "image": "chapa-bifeteira.jpg"
+  },
+  {
+    "name": "Fritadeira Elétrica Comercial",
+    "brand": "PCM Máquinas",
+    "desc": "Controle de temperatura e alta produção de frituras com padronização.",
+    "image": "fritadeira-eletrica.jpg"
+  },
+  {
+    "name": "Seladora a Vácuo",
+    "brand": "PCM Máquinas",
+    "desc": "Embalagem a vácuo para aumentar validade, organizar estoque e padronizar porções.",
+    "image": "seladora-vacuo.jpg"
+  },
+  {
+    "name": "Moedor de Carne Industrial",
+    "brand": "PCM Máquinas",
+    "desc": "Moagem eficiente para açougues e cozinhas industriais com demanda contínua.",
+    "image": "moedor-carne.jpg"
+  }
+]
