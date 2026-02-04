@@ -1,1 +1,20 @@
-# Pcm-maquinas-
+pcm-assets/
+└── img/
+    ├── cervejeira-imbera-522l.jpg
+    ├── beer-maxx-250-264l.jpg
+    ├── expositor-full-black-810l.jpg
+    ├── expositor-all-black-1257l.jpg
+    ├── freezer-vertical-531l.jpg
+    ├── freezer-horizontal-503l.jpg
+    ├── cortador-frios-300mm.jpg
+    ├── balanca-prix-agile-300s.jpg
+    ├── liquidificador-inox-2l.jpg
+    ├── estufa-vrd-12b-led.jpg
+    ├── estufa-vidro-reto-6b.jpg
+    ├── fogao-4-bocas-30x30.jpg
+    ├── masseira-basculante-5kg.jpg
+    ├── forno-convector-4-assadeiras.jpg
+    ├── chapa-bifeteira.jpg
+    ├── fritadeira-eletrica.jpg
+    ├── seladora-vacuo.jpg
+    └── moedor-carne.jpg
