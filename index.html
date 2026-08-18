@@ -1,135 +1,29 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Galeria de Produtos — pcm-assets/img</title>
-  <style>
-    :root{--gap:12px;--bg:#fafafa;--card:#fff;--muted:#666}
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;margin:0;background:var(--bg);color:#111}
-    header{padding:18px 22px;background:#0b5cff11}
-    header h1{margin:0;font-size:1.1rem}
-    .container{max-width:1100px;margin:18px auto;padding:0 18px}
-    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:var(--gap)}
-    .card{background:var(--card);border-radius:8px;overflow:hidden;box-shadow:0 1px 4px rgba(12,20,30,.04);display:flex;flex-direction:column}
-    .thumb{width:100%;height:0;padding-bottom:66%;position:relative;overflow:hidden;background:#eee}
-    .thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
-    .meta{padding:12px;font-size:.95rem;color:#111}
-    .price{color:#d33;font-weight:700}
-    .old-price{color:var(--muted);text-decoration:line-through;margin-right:8px}
-    .buy{display:inline-block;margin-top:10px;padding:8px 12px;background:#0b5cff;color:#fff;border-radius:6px;text-decoration:none}
-    .note{font-size:.9rem;color:var(--muted);margin-bottom:14px}
-    footer{max-width:1100px;margin:20px auto;padding:0 18px 30px;color:var(--muted);font-size:.85rem}
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PCM Máquinas | Soluções para cozinhas profissionais</title>
+  <meta name="description" content="Consultoria e venda de equipamentos e maquinários para cozinhas industriais, bares, restaurantes e açougues." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>Galeria de Produtos — pcm-assets/img</h1>
-  </header>
-
-  <main class="container">
-    <p class="note">As imagens são exibidas a partir da pasta <code>pcm-assets/img/</code>. Nenhum link externo foi incluído conforme solicitado.</p>
-
-    <section class="grid" aria-label="Galeria de produtos">
-
-      <!-- Estufa VRD 12 Bandejas -->
-      <article class="card">
-        <div class="thumb">
-          <img src="pcm-assets/img/estufa-vrd-12b-led.jpg" alt="Estufa Vrd 12 Bandejas Dupla Evr Com Led 220 V">
-        </div>
-        <div class="meta">
-          <div><strong>Estufa Vrd 12 Bandejas Dupla Evr Com Led 220 V</strong></div>
-          <div><span class="old-price">R$ 1.564,43</span> <span class="price">R$ 1.439,28</span></div>
-          <div class="note">8% OFF — À vista: R$ 1.439,28 — Até 10x sem juros</div>
-        </div>
-      </article>
-
-      <!-- Estufa vidro reto dupla 6 bandejas -->
-      <article class="card">
-        <div class="thumb">
-          <img src="pcm-assets/img/estufa-vidro-reto-6b.jpg" alt="Estufa vidro reto dupla 6 bandejas">
-        </div>
-        <div class="meta">
-          <div><strong>Estufa vidro reto dupla 6 bandejas</strong></div>
-          <div><span class="old-price">R$ 2.206,29</span> <span class="price">R$ 2.029,79</span></div>
-          <div class="note">8% OFF — À vista: R$ 2.029,79 — Até 10x sem juros</div>
-        </div>
-      </article>
-
-      <!-- Fogão 4 bocas 30x30 -->
-      <article class="card">
-        <div class="thumb">
-          <img src="pcm-assets/img/fogao-4-bocas-30x30.jpg" alt="Fogão 4 bocas 30x30 cm">
-        </div>
-        <div class="meta">
-          <div><strong>Fogão 4 bocas 30x30 cm perfil 5 2qs/2qd inox 430</strong></div>
-          <div><span class="old-price">R$ 1.743,69</span> <span class="price">R$ 1.599,00</span></div>
-          <div class="note">8% OFF — À vista: R$ 1.599,00 — Até 10x sem juros</div>
-        </div>
-      </article>
-
-      <!-- Masseira Basculante 5 Kg -->
-      <article class="card">
-        <div class="thumb">
-          <img src="pcm-assets/img/masseira-basculante-5kg.jpg" alt="Masseira Basculante 5 Kg">
-        </div>
-        <div class="meta">
-          <div><strong>Masseira Basculante 5 Kg 1/2 Hp Monofásica</strong></div>
-          <div><span class="old-price">R$ 3.739,24</span> <span class="price">R$ 2.649,00</span></div>
-          <div class="note">29% OFF — À vista: R$ 2.649,00 — Até 10x sem juros</div>
-        </div>
-      </article>
-
-      <!-- Forno Convector 4 assadeiras -->
-      <article class="card">
-        <div class="thumb">
-          <img src="pcm-assets/img/forno-convector-4-assadeiras.jpg" alt="Forno convector para 4 assadeiras">
-        </div>
-        <div class="meta">
-          <div><strong>Forno convector para 4 assadeiras</strong></div>
-          <div><span class="old-price">R$ 2.949,91</span> <span class="price">R$ 2.639,00</span></div>
-          <div class="note">11% OFF — À vista: R$ 2.639,00 — Até 10x sem juros</div>
-        </div>
-      </article>
-
-      <!-- Cervejeira Imbera 522l (sem link) -->
-      <article class="card">
-        <div class="thumb">
-          <img src="pcm-assets/img/cervejeira-imbera-522l.jpg" alt="Cervejeira Imbera 522L">
-        </div>
-        <div class="meta">
-          <div><strong>Cervejeira Imbera 522L</strong></div>
-          <div class="note">Produto referenciado — preço não incluído. Sem vínculo a sites externos.</div>
-        </div>
-      </article>
-
-      <!-- Cortador de frios 300mm (sem link) -->
-      <article class="card">
-        <div class="thumb">
-          <img src="pcm-assets/img/cortador-frios-300mm.jpg" alt="Cortador de frios 300mm">
-        </div>
-        <div class="meta">
-          <div><strong>Cortador de Frios Semi-automático 300mm</strong></div>
-          <div class="note">Produto referenciado — preço não incluído. Sem vínculo a sites externos.</div>
-        </div>
-      </article>
-
-      <!-- Expositor all black 1257l (sem link) -->
-      <article class="card">
-        <div class="thumb">
-          <img src="pcm-assets/img/expositor-all-black-1257l.jpg" alt="Expositor all black 1257L">
-        </div>
-        <div class="meta">
-          <div><strong>Expositor All Black 1257L</strong></div>
-          <div class="note">Produto referenciado — preço não incluído. Sem vínculo a sites externos.</div>
-        </div>
-      </article>
-
-    </section>
+  <div class="topbar"><div class="container topbar-inner"><a class="topbar-item" href="https://maps.app.goo.gl/GaJ7iZRAQxHrqAn27" target="_blank" rel="noopener"><span>⌖</span> Estr. Kizaemon Takeuti, 1490 - Jardim Roberto, Taboão da Serra - SP</a><div class="topbar-right"><span class="topbar-item">◷ Seg - Sex: 08h às 18h</span><a class="social-icon" href="https://www.instagram.com/pcmmaquinas/" target="_blank" rel="noopener">◎</a><a class="social-icon" href="https://wa.me/5511985881264" target="_blank" rel="noopener">◉</a></div></div></div>
+  <header class="site-header"><div class="container header-inner"><a class="brand" href="#home"><img class="logo" src="https://i.ibb.co/qYZsDvNP/5-B32-D0-B0-4-CD4-49-D8-BDB4-69-C4-C292510-B.png" alt="PCM Máquinas"></a><nav id="nav-menu" class="nav"><a class="active" href="#home">Início</a><a href="#about">Sobre nós</a><a href="#services">Serviços</a><a href="#gallery">Produtos</a><a href="#stores">Lojas</a><a href="#contact">Contato</a></nav><div class="header-actions"><a class="btn btn-whatsapp-header" href="https://wa.me/5511985881264" target="_blank" rel="noopener"><span>◉</span> Falar no WhatsApp</a><button class="menu-toggle" type="button">☰</button></div></div></header>
+  <main>
+    <section id="home" class="hero"><div class="container hero-grid"><div class="hero-copy"><span class="eyebrow">PCM MÁQUINAS • DESDE 1993</span><h1>Soluções completas para <span>cozinhas profissionais.</span></h1><p>Consultoria especializada e os melhores equipamentos para cozinhas industriais, bares, restaurantes e açougues.</p><div class="hero-actions"><a class="btn btn-primary" href="#gallery">Ver Produtos ▢</a><a class="btn btn-outline" href="#services">Nossos Serviços ⌘</a></div><div class="trust-row"><div class="trust-item"><span class="trust-icon">◆</span><strong>Tradição e confiança<br><small>desde 1993</small></strong></div><div class="trust-item"><span class="trust-icon">✹</span><strong>Equipamentos de<br><small>alta qualidade</small></strong></div><div class="trust-item"><span class="trust-icon">◔</span><strong>Atendimento<br><small>especializado</small></strong></div></div></div><div class="hero-visual"><div class="hero-blob"></div><img class="hero-machine mixer" src="https://i.ibb.co/M4Zn7Yq/IMG-4125.webp" alt="Masseira profissional"><img class="hero-machine cooler" src="https://i.ibb.co/jkbLpN6M/IMG-4119.webp" alt="Cervejeira profissional"></div></div></section>
+    <section id="about" class="section about-section"><div class="container about-grid"><div class="about-copy"><span class="section-kicker">QUEM SOMOS</span><h2>Tradição, qualidade e atendimento que fazem a diferença.</h2><p>Desde 1993, a PCM Máquinas atua com soluções completas para o food service, com tradição, qualidade e atendimento personalizado.</p><a class="text-btn" href="#stores">Saiba mais sobre nós →</a></div><div class="stats-card"><div class="stat"><span class="stat-icon">▣</span><strong>+30</strong><small>Anos de mercado</small></div><div class="stat"><span class="stat-icon">♧</span><strong>+5 mil</strong><small>Clientes atendidos</small></div><div class="stat"><span class="stat-icon">◇</span><strong>+2 mil</strong><small>Produtos disponíveis</small></div><div class="stat"><span class="stat-icon">⌖</span><strong>1</strong><small>Loja física em Taboão da Serra</small></div></div></div></section>
+    <section id="services" class="section services-section"><div class="container"><div class="center-heading"><span class="section-kicker">SERVIÇOS</span><h2>Como podemos te ajudar</h2><span class="heading-line"></span></div><div class="services-grid"><article class="service-card"><span class="service-icon">♙</span><h3>Consultoria</h3><p>Orientação completa para escolha do equipamento ideal para o seu negócio.</p></article><article class="service-card"><span class="service-icon">▦</span><h3>Venda de Equipamentos</h3><p>Máquinas e soluções das melhores marcas para sua cozinha profissional.</p></article><article class="service-card"><span class="service-icon">✎</span><h3>Projetos</h3><p>Dimensionamento e layout personalizado para cozinhas industriais e comerciais.</p></article><article class="service-card"><span class="service-icon">◔</span><h3>Pós-venda</h3><p>Suporte técnico e acompanhamento após a compra.</p></article></div></div></section>
+    <section id="gallery" class="section products-section"><div class="container"><div class="center-heading"><span class="section-kicker">PRODUTOS EM DESTAQUE</span><h2>Equipamentos para impulsionar seu negócio</h2><span class="heading-line"></span></div><div class="gallery-actions"><button id="leftBtn" class="icon-btn">←</button><button id="rightBtn" class="icon-btn">→</button></div><div class="carousel-track" id="productsTrack"></div><div class="center-action"><a class="btn btn-primary" href="#contact">Ver todos os produtos ▢</a></div></div></section>
+    <section id="stores" class="section store-section"><div class="container"><div class="store-panel"><div><span class="section-kicker">NOSSA LOJA</span><h2>Visite a PCM Máquinas</h2><p>Estr. Kizaemon Takeuti, 1490<br>Jardim Roberto • Taboão da Serra - SP</p><a class="btn btn-outline" href="https://maps.app.goo.gl/GaJ7iZRAQxHrqAn27" target="_blank">Ver no Maps →</a></div><div class="map-embed"><iframe title="Mapa da PCM Máquinas" loading="lazy" src="https://www.google.com/maps?q=-23.6369493,-46.7908054&z=17&output=embed"></iframe></div></div></div></section>
+    <section id="contact" class="cta-section"><div class="container"><div class="cta-card"><div class="cta-copy"><span class="cta-icon">◔</span><div><h2>Precisa de ajuda para escolher o equipamento ideal?</h2><p>Fale agora com um especialista e receba atendimento personalizado.</p></div></div><a class="btn cta-btn" href="https://wa.me/5511985881264" target="_blank">Falar no WhatsApp <span>◉</span></a></div></div></section>
   </main>
-
-  <footer>
-    Observação: confirme que a pasta <code>pcm-assets/img/</code> contém as imagens com os nomes exatos (case-sensitive). Este arquivo não contém links para sites externos conforme solicitado.
-  </footer>
+  <footer class="footer"><div class="container footer-grid"><div class="footer-brand"><img src="https://i.ibb.co/qYZsDvNP/5-B32-D0-B0-4-CD4-49-D8-BDB4-69-C4-C292510-B.png" alt="PCM Máquinas"><strong>PCM Máquinas</strong><p>Consultoria e venda de equipamentos e maquinários para cozinhas industriais, bares, restaurantes e açougues.</p><div class="footer-socials"><a href="https://www.instagram.com/pcmmaquinas/" target="_blank">◎</a><a href="https://wa.me/5511985881264" target="_blank">◉</a></div></div><div class="footer-col"><h3>Links rápidos</h3><a href="#home">Início</a><a href="#about">Sobre nós</a><a href="#services">Serviços</a><a href="#gallery">Produtos</a><a href="#stores">Lojas</a><a href="#contact">Contato</a></div><div class="footer-col"><h3>Contato</h3><a href="tel:+551141375308">☎ (11) 4137-5308</a><a href="https://wa.me/5511985881264">◉ (11) 98588-1264</a><a href="mailto:vendas@pcmmaquinas.com.br">✉ vendas@pcmmaquinas.com.br</a></div><div class="footer-col"><h3>Nossa loja</h3><p>Estr. Kizaemon Takeuti, 1490<br>Jardim Roberto<br>Taboão da Serra - SP</p></div></div><div class="container footer-bottom"><span>© 2026 PCM Máquinas. Todos os direitos reservados.</span></div></footer>
+  <a class="whatsapp-float" href="https://wa.me/5511985881264" target="_blank">◉</a>
+  <div class="modal" id="productModal" aria-hidden="true"><div class="modal-backdrop" data-close="true"></div><div class="modal-card"><button class="modal-close" data-close="true">×</button><div class="modal-body"><img class="modal-img" id="modalImg" alt=""><div class="modal-content"><h3 class="modal-title" id="modalTitle"></h3><p class="modal-desc" id="modalDesc"></p><a class="btn btn-primary modal-wpp" id="modalWpp" href="#" target="_blank">Falar com um especialista</a><button class="btn btn-outline" data-close="true">Fechar</button></div></div></div></div>
+  <script src="script.js"></script>
 </body>
 </html>
