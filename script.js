@@ -1,5 +1,4 @@
 (() => {
- const responsiveFix=document.createElement('link');responsiveFix.rel='stylesheet';responsiveFix.href='responsive-fix.css';document.head.appendChild(responsiveFix);
  const W='5511985881264';
  const products=[
  {name:'Batedeira Profissional RHINO BATI-20 110V',image:'https://i.ibb.co/M4Zn7Yq/IMG-4125.webp',desc:'Equipamento profissional robusto para produção em cozinhas comerciais, confeitarias e padarias.',category:'Preparação de Alimentos'},
