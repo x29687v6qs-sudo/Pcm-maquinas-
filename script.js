@@ -1,25 +1,22 @@
 (() => {
-  const responsiveFix=document.createElement("link");
-  responsiveFix.rel="stylesheet";
-  responsiveFix.href="responsive-fix.css";
-  document.head.appendChild(responsiveFix);
-
-  const WHATSAPP_NUMBER = "5511985881264";
-  const products = [
-    {name:"Batedeira Profissional RHINO BATI-20 110V",image:"https://i.ibb.co/M4Zn7Yq/IMG-4125.webp",desc:"Equipamento profissional robusto para produção em cozinhas comerciais, confeitarias e padarias."},
-    {name:"Cervejeira Imbera CCV355 Porta de Vidro (522 L)",image:"https://i.ibb.co/jkbLpN6M/IMG-4119.webp",desc:"Refrigeração eficiente e econômica, com excelente exposição para bebidas."},
-    {name:"Mesa Inox Industrial com Prateleira Inferior",image:"https://i.ibb.co/1tMKFqmS/IMG-4126.webp",desc:"Diversos tamanhos e alta resistência para rotina profissional."},
-    {name:"Fogão Industrial 4 Bocas 30x30 – Inox 430",image:"https://i.ibb.co/0pSnCGBm/IMG-4116.webp",desc:"Alto desempenho, construção robusta e praticidade para sua cozinha."},
-    {name:"Refrigerador Expositor Metalfrio VBM3 All Black – Porta Dupla",image:"https://i.ibb.co/kgct48vr/IMG-4121.webp",desc:"Grande capacidade, iluminação LED e apresentação profissional."},
-    {name:"Forno Convector Venâncio Smart Basic",image:"https://i.ibb.co/G4kRYcrh/IMG-4118.webp",desc:"Circulação de ar forçada para assamento uniforme em cozinhas profissionais."},
-    {name:"Liquidificador Industrial Skymsen LB25 (25 L)",image:"https://i.ibb.co/cS1xh0v8/IMG-4124.webp",desc:"Alta capacidade e desempenho para grandes volumes."},
-    {name:"Estufa Vidro Reto Dupla – 12 Bandejas",image:"https://i.ibb.co/5fXdPKP/IMG-4114.webp",desc:"Exposição aquecida com excelente visualização dos produtos."}
-  ];
-  const track=document.getElementById("productsTrack"), modal=document.getElementById("productModal"), modalImg=document.getElementById("modalImg"), modalTitle=document.getElementById("modalTitle"), modalDesc=document.getElementById("modalDesc"), modalWpp=document.getElementById("modalWpp");
-  const makeWppLink=n=>`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Olá, gostaria de saber mais sobre o produto ${n}.`)}`;
-  function closeModal(){if(!modal)return;modal.setAttribute("aria-hidden","true");document.body.style.overflow=""}
-  function openModal(p){modalImg.src=p.image;modalImg.alt=p.name;modalTitle.textContent=p.name;modalDesc.textContent=p.desc;modalWpp.href=makeWppLink(p.name);modal.setAttribute("aria-hidden","false");document.body.style.overflow="hidden"}
-  products.forEach(p=>{const c=document.createElement("article");c.className="product-card";c.innerHTML=`<img class="product-img" src="${p.image}" alt="${p.name}" loading="lazy"><div class="product-info"><p class="product-name">${p.name}</p><p class="product-desc">${p.desc}</p><span class="product-link">Ver detalhes →</span></div>`;c.onclick=()=>openModal(p);track?.appendChild(c)});
-  document.getElementById("leftBtn")?.addEventListener("click",()=>track.scrollBy({left:-590,behavior:"smooth"}));document.getElementById("rightBtn")?.addEventListener("click",()=>track.scrollBy({left:590,behavior:"smooth"}));modal?.addEventListener("click",e=>{if(e.target?.dataset?.close==="true")closeModal()});document.addEventListener("keydown",e=>{if(e.key==="Escape")closeModal()});
-  const menu=document.getElementById("nav-menu"),toggle=document.querySelector(".menu-toggle");toggle?.addEventListener("click",()=>menu.classList.toggle("open"));
+ const responsiveFix=document.createElement('link');responsiveFix.rel='stylesheet';responsiveFix.href='responsive-fix.css';document.head.appendChild(responsiveFix);
+ const W='5511985881264';
+ const products=[
+ {name:'Batedeira Profissional RHINO BATI-20 110V',image:'https://i.ibb.co/M4Zn7Yq/IMG-4125.webp',desc:'Equipamento profissional robusto para produção em cozinhas comerciais, confeitarias e padarias.',category:'Preparação de Alimentos'},
+ {name:'Cervejeira Imbera CCV355 Porta de Vidro (522 L)',image:'https://i.ibb.co/jkbLpN6M/IMG-4119.webp',desc:'Refrigeração eficiente e econômica, com excelente exposição para bebidas.',category:'Refrigeração'},
+ {name:'Mesa Inox Industrial com Prateleira Inferior',image:'https://i.ibb.co/1tMKFqmS/IMG-4126.webp',desc:'Alta resistência e praticidade para a rotina profissional.',category:'Aço Inox'},
+ {name:'Fogão Industrial 4 Bocas 30x30 – Inox 430',image:'https://i.ibb.co/0pSnCGBm/IMG-4116.webp',desc:'Alto desempenho e construção robusta para cozinhas profissionais.',category:'Cocção'},
+ {name:'Refrigerador Expositor Metalfrio VBM3 All Black – Porta Dupla',image:'https://i.ibb.co/kgct48vr/IMG-4121.webp',desc:'Grande capacidade, iluminação LED e apresentação profissional.',category:'Refrigeração'},
+ {name:'Forno Convector Venâncio Smart Basic',image:'https://i.ibb.co/G4kRYcrh/IMG-4118.webp',desc:'Circulação de ar forçada para assamento uniforme.',category:'Cocção'},
+ {name:'Liquidificador Industrial Skymsen LB25 (25 L)',image:'https://i.ibb.co/cS1xh0v8/IMG-4124.webp',desc:'Alta capacidade e desempenho para grandes volumes.',category:'Preparação de Alimentos'},
+ {name:'Estufa Vidro Reto Dupla – 12 Bandejas',image:'https://i.ibb.co/5fXdPKP/IMG-4114.webp',desc:'Exposição aquecida com excelente visualização dos produtos.',category:'Linha Hotelaria'}
+ ];
+ const icons={prep:'<svg viewBox="0 0 48 48"><path d="M16 9h16v6H16zM19 15v20a5 5 0 0 0 10 0V15M14 25h20"/></svg>',cook:'<svg viewBox="0 0 48 48"><rect x="10" y="9" width="28" height="30" rx="2"/><path d="M10 17h28M16 13h2m5 0h2m5 0h2M16 23h16v11H16z"/></svg>',cold:'<svg viewBox="0 0 48 48"><path d="M24 7v34M10 15l28 18M38 15 10 33M18 10l6 5 6-5M18 38l6-5 6 5"/></svg>',inox:'<svg viewBox="0 0 48 48"><path d="M8 19h32M11 19v20m26-20v20M9 25h30M15 25v14m18-14v14"/></svg>',hotel:'<svg viewBox="0 0 48 48"><path d="M8 25h32M13 25v14m22-14v14M15 22c2-7 16-7 18 0M24 10v7M19 10h10"/></svg>',butcher:'<svg viewBox="0 0 48 48"><path d="M14 39V13h16a7 7 0 0 1 0 14H20M20 27v12M27 13V8M11 39h19"/></svg>',wash:'<svg viewBox="0 0 48 48"><path d="M24 7S13 20 13 29a11 11 0 0 0 22 0C35 20 24 7 24 7Z"/><path d="M18 30a6 6 0 0 0 6 6"/></svg>',more:'<svg viewBox="0 0 48 48"><path d="m15 8 2 6 6 2-6 2-2 6-2-6-6-2 6-2 2-6Zm19 15 2 5 5 2-5 2-2 5-2-5-5-2 5-2 2-5Z"/></svg>'};
+ document.querySelectorAll('.category-icon').forEach(el=>el.innerHTML=icons[el.dataset.icon]||icons.more);
+ const catalog=document.getElementById('equipmentCatalog'),grid=document.getElementById('equipmentGrid'),expand=document.getElementById('expandProductsBtn'),load=document.getElementById('loadMoreProducts');let filter='Todos',limit=6;
+ const link=p=>`https://wa.me/${W}?text=${encodeURIComponent('Olá, gostaria de saber mais sobre o produto '+p.name+'.')}`;
+ function render(){if(!grid)return;const list=products.filter(p=>filter==='Todos'||p.category===filter);grid.innerHTML=list.slice(0,limit).map(p=>`<article class="equipment-card"><div class="equipment-image"><img src="${p.image}" alt="${p.name}" loading="lazy"></div><div class="equipment-info"><span class="equipment-tag">${p.category}</span><h3>${p.name}</h3><p>${p.desc}</p><a href="${link(p)}" target="_blank" rel="noopener">Ver detalhes →</a></div></article>`).join('');if(load)load.hidden=list.length<=limit;}
+ function open(category='Todos'){filter=category;limit=6;catalog.hidden=false;requestAnimationFrame(()=>catalog.classList.add('is-open'));document.querySelectorAll('#productFilters button').forEach(b=>b.classList.toggle('active',b.dataset.filter===filter));render();catalog.scrollIntoView({behavior:'smooth',block:'start'});}
+ expand?.addEventListener('click',()=>open('Todos'));document.querySelectorAll('.equipment-category').forEach(b=>b.addEventListener('click',()=>open(b.dataset.category)));document.querySelectorAll('#productFilters button').forEach(b=>b.addEventListener('click',()=>{filter=b.dataset.filter;limit=6;document.querySelectorAll('#productFilters button').forEach(x=>x.classList.toggle('active',x===b));render()}));load?.addEventListener('click',()=>{limit+=6;render()});
+ const menu=document.getElementById('nav-menu'),toggle=document.querySelector('.menu-toggle');toggle?.addEventListener('click',()=>menu?.classList.toggle('open'));
 })();
