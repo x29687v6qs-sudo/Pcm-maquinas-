@@ -20,6 +20,14 @@
  const fispalLogo=document.querySelector('.fispal-brand-placeholder');
  if(fispalLogo){fispalLogo.classList.remove('placeholder');fispalLogo.innerHTML='<img src="assets/fispal/fispal-logo.png?v=1" alt="Fispal Food Service" loading="lazy" style="display:block;width:100%;height:100%;object-fit:contain;padding:8px">';fispalLogo.style.overflow='hidden';fispalLogo.style.background='#fff';}
  const fispalPhoto=document.querySelector('.fispal-photo-placeholder');
- if(fispalPhoto){fispalPhoto.classList.remove('placeholder');fispalPhoto.innerHTML='<img src="assets/fispal/fispal-2019-equipe.png?v=1" alt="Equipe PCM Máquinas na Fispal Food Service 2019" loading="lazy" style="display:block;width:100%;height:100%;object-fit:cover;object-position:center">';fispalPhoto.style.overflow='hidden';fispalPhoto.style.background='#07162f';}
+ if(fispalPhoto){fispalPhoto.classList.remove('placeholder');fispalPhoto.innerHTML='<div style="width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;background:linear-gradient(135deg,#07162f,#0b4fae);color:#fff"><strong style="font-size:34px;line-height:1;margin-bottom:10px">2018 & 2019</strong><span style="font-size:15px;line-height:1.45;max-width:260px">Participações da PCM Máquinas na Fispal Food Service</span></div>';fispalPhoto.style.overflow='hidden';fispalPhoto.style.background='#07162f';}
+ const timelineFispal=document.querySelector('.history-timeline .timeline article:nth-child(2)');
+ if(timelineFispal){const year=timelineFispal.querySelector('strong'),text=timelineFispal.querySelector('p');if(year)year.textContent='2018 • 2019';if(text)text.textContent='Participações da PCM Máquinas na Fispal Food Service em 2018 e 2019.';}
+ const fispalTitle=document.querySelector('.fispal-copy h2');
+ const fispalText=document.querySelector('.fispal-copy p');
+ if(fispalTitle)fispalTitle.textContent='FISPAL 2018 & 2019';
+ if(fispalText)fispalText.textContent='A PCM Máquinas participou da Fispal Food Service em 2018 e 2019, fortalecendo relacionamentos, acompanhando inovações e ampliando sua presença no setor.';
+ const clientStat=[...document.querySelectorAll('.about-stat-card')].find(card=>card.textContent.includes('Clientes atendidos'));
+ if(clientStat){const value=clientStat.querySelector('strong');if(value)value.textContent='+15 mil';}
  const menu=document.getElementById('nav-menu'),toggle=document.querySelector('.menu-toggle');toggle?.addEventListener('click',()=>menu?.classList.toggle('open'));
 })();
