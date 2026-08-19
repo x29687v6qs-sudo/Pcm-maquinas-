@@ -10,8 +10,18 @@
  {name:'Liquidificador Industrial Skymsen LB25 (25 L)',image:'https://i.ibb.co/cS1xh0v8/IMG-4124.webp',desc:'Alta capacidade e desempenho para grandes volumes.',category:'Preparação de Alimentos'},
  {name:'Estufa Vidro Reto Dupla – 12 Bandejas',image:'https://i.ibb.co/5fXdPKP/IMG-4114.webp',desc:'Exposição aquecida com excelente visualização dos produtos.',category:'Linha Hotelaria'}
  ];
- const icons={prep:'<svg viewBox="0 0 48 48"><path d="M16 9h16v6H16zM19 15v20a5 5 0 0 0 10 0V15M14 25h20"/></svg>',cook:'<svg viewBox="0 0 48 48"><rect x="10" y="9" width="28" height="30" rx="2"/><path d="M10 17h28M16 13h2m5 0h2m5 0h2M16 23h16v11H16z"/></svg>',cold:'<svg viewBox="0 0 48 48"><path d="M24 7v34M10 15l28 18M38 15 10 33M18 10l6 5 6-5M18 38l6-5 6 5"/></svg>',inox:'<svg viewBox="0 0 48 48"><path d="M8 19h32M11 19v20m26-20v20M9 25h30M15 25v14m18-14v14"/></svg>',hotel:'<svg viewBox="0 0 48 48"><path d="M8 25h32M13 25v14m22-14v14M15 22c2-7 16-7 18 0M24 10v7M19 10h10"/></svg>',butcher:'<svg viewBox="0 0 48 48"><path d="M14 39V13h16a7 7 0 0 1 0 14H20M20 27v12M27 13V8M11 39h19"/></svg>',wash:'<svg viewBox="0 0 48 48"><path d="M24 7S13 20 13 29a11 11 0 0 0 22 0C35 20 24 7 24 7Z"/><path d="M18 30a6 6 0 0 0 6 6"/></svg>',more:'<svg viewBox="0 0 48 48"><path d="m15 8 2 6 6 2-6 2-2 6-2-6-6-2 6-2 2-6Zm19 15 2 5 5 2-5 2-2 5-2-5-5-2 5-2 2-5Z"/></svg>'};
- document.querySelectorAll('.category-icon').forEach(el=>el.innerHTML=icons[el.dataset.icon]||icons.more);
+ const icons={
+  mixer:'<svg viewBox="0 0 48 48"><path d="M14 9h20v8H14zM18 17v5h12v-5M24 22v16M18 38h12M15 27h18"/><path d="M20 27c0 7 1 11 4 11s4-4 4-11"/></svg>',
+  grinder:'<svg viewBox="0 0 48 48"><path d="M10 11h19v9H10zM15 20v18M29 15h5a5 5 0 0 1 5 5v8H25M25 24v8M21 32h8M12 38h17"/><circle cx="35" cy="28" r="5"/></svg>',
+  oven:'<svg viewBox="0 0 48 48"><rect x="9" y="7" width="30" height="34" rx="2"/><path d="M9 16h30M15 11h2m6 0h2m6 0h2M15 22h18v13H15z"/></svg>',
+  fridge:'<svg viewBox="0 0 48 48"><rect x="14" y="5" width="20" height="38" rx="2"/><path d="M14 21h20M29 11v6M29 27v6"/></svg>',
+  slicer:'<svg viewBox="0 0 48 48"><path d="M11 36h27M14 32l17-20M28 11a10 10 0 1 1-8 18M14 32h16M34 27l4 9"/><circle cx="24" cy="20" r="7"/></svg>',
+  grill:'<svg viewBox="0 0 48 48"><path d="M9 18h30v17H9zM12 13h24l3 5H9zM14 35v5M34 35v5M14 24h20M14 29h20"/></svg>',
+  service:'<svg viewBox="0 0 48 48"><path d="M15 9l7 7-6 6-7-7M33 39l-9-9M33 9a8 8 0 0 0-8 10L10 34a3 3 0 0 0 4 4l15-15a8 8 0 0 0 10-8l-5 5-6-6 5-5Z"/></svg>',
+  more:'<svg viewBox="0 0 48 48"><path d="m15 8 2 6 6 2-6 2-2 6-2-6-6-2 6-2 2-6Zm19 15 2 5 5 2-5 2-2 5-2-5-5-2 5-2 2-5Z"/></svg>'
+ };
+ const categoryTypes=['mixer','grinder','oven','fridge','slicer','grill','service'];
+ document.querySelectorAll('.equipment-category').forEach((button,i)=>{const el=button.querySelector('.category-icon');if(el)el.innerHTML=icons[categoryTypes[i]]||icons.more;});
  const catalog=document.getElementById('equipmentCatalog'),grid=document.getElementById('equipmentGrid'),expand=document.getElementById('expandProductsBtn'),load=document.getElementById('loadMoreProducts');let filter='Todos',limit=6;
  const link=p=>`https://wa.me/${W}?text=${encodeURIComponent('Olá, gostaria de saber mais sobre o produto '+p.name+'.')}`;
  function render(){if(!grid)return;const list=products.filter(p=>filter==='Todos'||p.category===filter);grid.innerHTML=list.slice(0,limit).map(p=>`<article class="equipment-card"><div class="equipment-image"><img src="${p.image}" alt="${p.name}" loading="lazy"></div><div class="equipment-info"><span class="equipment-tag">${p.category}</span><h3>${p.name}</h3><p>${p.desc}</p><a href="${link(p)}" target="_blank" rel="noopener">Ver detalhes →</a></div></article>`).join('');if(load)load.hidden=list.length<=limit;}
