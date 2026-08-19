@@ -17,10 +17,11 @@
  function render(){if(!grid)return;const list=products.filter(p=>filter==='Todos'||p.category===filter);grid.innerHTML=list.slice(0,limit).map(p=>`<article class="equipment-card"><div class="equipment-image"><img src="${p.image}" alt="${p.name}" loading="lazy"></div><div class="equipment-info"><span class="equipment-tag">${p.category}</span><h3>${p.name}</h3><p>${p.desc}</p><a href="${link(p)}" target="_blank" rel="noopener">Ver detalhes →</a></div></article>`).join('');if(load)load.hidden=list.length<=limit;}
  function open(category='Todos'){filter=category;limit=6;catalog.hidden=false;requestAnimationFrame(()=>catalog.classList.add('is-open'));document.querySelectorAll('#productFilters button').forEach(b=>b.classList.toggle('active',b.dataset.filter===filter));render();catalog.scrollIntoView({behavior:'smooth',block:'start'});}
  expand?.addEventListener('click',()=>open('Todos'));document.querySelectorAll('.equipment-category').forEach(b=>b.addEventListener('click',()=>open(b.dataset.category)));document.querySelectorAll('#productFilters button').forEach(b=>b.addEventListener('click',()=>{filter=b.dataset.filter;limit=6;document.querySelectorAll('#productFilters button').forEach(x=>x.classList.toggle('active',x===b));render()}));load?.addEventListener('click',()=>{limit+=6;render()});
+ const removeObsoleteFispalPhoto=()=>document.querySelectorAll('.fispal-photo-placeholder').forEach(el=>el.remove());
+ removeObsoleteFispalPhoto();
  const fispalLogo=document.querySelector('.fispal-brand-placeholder');
  if(fispalLogo){fispalLogo.classList.remove('placeholder');fispalLogo.innerHTML='<img src="assets/fispal/fispal-logo.png?v=1" alt="Fispal Food Service" loading="lazy" style="display:block;width:100%;height:100%;object-fit:contain;padding:8px">';fispalLogo.style.overflow='hidden';fispalLogo.style.background='#fff';}
- const fispalPhoto=document.querySelector('.fispal-photo-placeholder');
- if(fispalPhoto)fispalPhoto.remove();
+ removeObsoleteFispalPhoto();
  const timelineFispal=document.querySelector('.history-timeline .timeline article:nth-child(2)');
  if(timelineFispal){const year=timelineFispal.querySelector('strong'),text=timelineFispal.querySelector('p');if(year)year.textContent='2018 • 2019';if(text)text.textContent='Participações da PCM Máquinas na Fispal Food Service em 2018 e 2019.';}
  const fispalTitle=document.querySelector('.fispal-copy h2');
