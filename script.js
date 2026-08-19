@@ -30,5 +30,8 @@
  if(fispalText)fispalText.textContent='A PCM Máquinas participou da Fispal Food Service em 2018 e 2019, fortalecendo relacionamentos, acompanhando inovações e ampliando sua presença no setor.';
  const clientStat=[...document.querySelectorAll('.about-stat-card')].find(card=>card.textContent.includes('Clientes atendidos'));
  if(clientStat){const value=clientStat.querySelector('strong');if(value)value.textContent='+15 mil';}
+ const headerLogo=document.querySelector('.site-header .logo');
+ const sizeHeaderLogo=()=>{if(!headerLogo)return;const w=window.innerWidth;headerLogo.style.width=w<=600?'132px':w<=1180?'225px':'270px';headerLogo.style.height='auto';headerLogo.style.maxHeight=w<=600?'64px':'92px';headerLogo.style.objectFit='contain';headerLogo.style.objectPosition='left center';};
+ sizeHeaderLogo();window.addEventListener('resize',sizeHeaderLogo,{passive:true});
  const menu=document.getElementById('nav-menu'),toggle=document.querySelector('.menu-toggle');toggle?.addEventListener('click',()=>menu?.classList.toggle('open'));
 })();
