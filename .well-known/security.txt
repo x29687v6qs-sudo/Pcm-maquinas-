@@ -1,0 +1,5 @@
+Contact: https://pcmmaquinas.com.br/#contact
+Preferred-Languages: pt-BR, en
+Canonical: https://pcmmaquinas.com.br/.well-known/security.txt
+Policy: https://pcmmaquinas.com.br/#contact
+Expires: 2027-08-31T23:59:59Z
